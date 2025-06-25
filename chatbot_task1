@@ -1,0 +1,45 @@
+# CHATBOT
+def chatbot():
+    print("🤖 Chatbot: Hi! I'm ChatBot. Type 'bye' to exit.")
+
+    while True:
+        user_input = input("You: ").lower()
+
+        if "hello" in user_input or "hi" in user_input:
+            print("🤖 Chatbot: Hello! How can I assist you today?")
+        elif "how are you" in user_input:
+            print("🤖 Chatbot: I'm just a program, but I'm doing great! How about you?")
+        elif "your name" in user_input:
+            print("🤖 Chatbot: I'm a rule-based chatbot created to help you.")
+        elif "help" in user_input:
+            print("🤖 Chatbot: Sure! I can answer your questions about weather, time, or just chat.")
+        elif "time" in user_input:
+           from datetime import datetime
+           import pytz
+
+           # Set timezone to India
+           india_timezone = pytz.timezone('Asia/Kolkata')
+
+            # Get current time in India
+           india_time = datetime.now(india_timezone)
+           print("Current Time in India:", india_time.strftime("%H:%M:%S"))
+        elif "weather" in user_input:
+            print("🌤️ Chatbot: I'm not connected to the internet, but it's always sunny in my world!")
+        elif "tell me a joke" in user_input:
+            print("🤖 ChatBot: Why did the computer go to therapy? Because it had too many bytes of issues!")
+        elif user_input == "what is ai":
+            print("🤖 ChatBot: AI stands for Artificial Intelligence. It's about making machines smart!")
+        elif user_input == "who is the prime minister of india":
+            print("🤖 ChatBot: The current Prime Minister of India is Narendra Modi.")
+        elif user_input =="what ia python":
+            print("🤖 chatBot: Python is a high-level, easy-to-read programming language used for web, data science, AI, and more.")
+        elif user_input =="what ia java":
+            print("🤖 chatBot:  Java is a popular, object-oriented programming language used for building platform-independent applications.") 
+        elif "bye" in user_input or "exit" in user_input:
+            print("👋 Chatbot: Goodbye! Have a nice day.")
+            break
+        else:
+            print("🤖 Chatbot: I'm not sure how to respond to that. Try asking something else.")
+
+# Run the chatbot
+chatbot()
